@@ -14,12 +14,10 @@
     <tr width="100%">
         <td align="center"><a href= "">김민주</a></td>
         <td align="center"><a href= "">윤예린</a></td>
-
     </tr>
     <tr width="100%">
          <td  align="center"><img src = "" width="100px"/></td>
         <td  align="center"><img src = "" width="100px" /></td>
-
     </tr>
     <tr width="100%">
       <td  align="center"></td>
