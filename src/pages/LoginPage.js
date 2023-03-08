@@ -14,11 +14,12 @@ const LoginPage = () => {
         <Title>로그인</Title>
         <span>계정이 없으신가요?</span>
         <Link to="/register">회원가입하기</Link>
+        <div className="line"></div>
         <IDinput type="text" placeholder="아이디"></IDinput>
-        <PWinput type="passwordt" placeholder="비밀번호"></PWinput>
+        <PWinput type="password" placeholder="비밀번호"></PWinput>
         <span>아이디찾기</span>
         <span>비밀번호 찾기</span>
-        <Link to="/register"></Link>
+        <Link to="/register">회원가입</Link>
         <LoginBtn>로그인</LoginBtn>
       </Wrapper>
     </>
@@ -32,11 +33,26 @@ const Wrapper = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 24px;
   margin: auto;
+  text-align: center;
+  span {
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .line {
+    margin-top: 60px;
+    border: 1.5px solid #d7d7d7;
+    height: 0px;
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
 `;
 const SubTitle = styled.h2`
   align-items: center;
   text-align: center;
-  color: var(--grey);
+  color: $grey;
   font-size: 15px;
 `;
 const Title = styled.h1`
@@ -53,6 +69,8 @@ const LoginBtn = styled.button`
   border-radius: 24.5px;
   display: block;
   border: none;
+  margin-top: 20px;
+  background-color: $pink;
 `;
 
 const IDinput = styled.input`
@@ -64,6 +82,7 @@ const IDinput = styled.input`
   border-radius: 10px;
   height: 34px;
   margin-bottom: 28px;
+  margin-top: 40px;
 `;
 
 const PWinput = styled.input`
