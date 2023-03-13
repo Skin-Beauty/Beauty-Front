@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import "../styles/common.scss";
 import titleBox from "../components/titleBox";
 import popularCosmetic from "../_mock/popular";
+import BackBtn from "../components/backBtn";
 
 const CosmeticPage = () => {
   return (
     <>
+      <BackBtn></BackBtn>
       {titleBox("인기제품")}
       {popularCosmetic.map((cos) => {
         return (

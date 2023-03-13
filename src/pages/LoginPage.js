@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 import "../styles/common.scss";
+import BackBtn from "../components/backBtn";
 
 const LoginPage = () => {
   useEffect(() => {
@@ -9,6 +10,7 @@ const LoginPage = () => {
   }, []);
   return (
     <>
+      <BackBtn></BackBtn>
       <Wrapper>
         <SubTitle>Login</SubTitle>
         <Title>로그인</Title>

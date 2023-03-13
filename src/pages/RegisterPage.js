@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 import "../styles/common.scss";
+import BackBtn from "../components/backBtn";
 
 const RegisterPage = () => {
   useEffect(() => {
@@ -9,6 +10,7 @@ const RegisterPage = () => {
   }, []);
   return (
     <>
+      <BackBtn></BackBtn>
       <Wrapper>
         <SubTitle>Create an account</SubTitle>
         <Title>회원가입</Title>
