@@ -3,8 +3,9 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 import "../styles/common.scss";
 import BackBtn from "../components/backBtn";
+import Profile from "../asset/Profile.svg";
 
-const LoginPage = () => {
+const MyPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -12,23 +13,52 @@ const LoginPage = () => {
     <>
       <BackBtn></BackBtn>
       <Wrapper>
-        <SubTitle>Login</SubTitle>
-        <Title>로그인</Title>
-        <span>계정이 없으신가요?</span>
-        <Link to="/register">회원가입하기</Link>
-        <div className="line"></div>
-        <IDinput type="text" placeholder="아이디"></IDinput>
-        <PWinput type="password" placeholder="비밀번호"></PWinput>
-        <span>아이디찾기</span>
-        <span>비밀번호 찾기</span>
-        <Link to="/register">회원가입</Link>
-        <LoginBtn>로그인</LoginBtn>
+        <SubTitle>Mypage</SubTitle>
+        <Title>마이페이지</Title>
+        <ImgBox></ImgBox>
+        <TypeBox>
+          <h2>내 피부 MBTI</h2>
+          <img src={Profile}></img>
+          <span>여드름성 피부</span>
+        </TypeBox>
+        <LoginBtn>회원정보수정</LoginBtn>
       </Wrapper>
     </>
   );
 };
-export default LoginPage;
+export default MyPage;
 
+const ImgBox = styled.div`
+  border-radius: 40px;
+  width: 260px;
+  height: 260px;
+  margin: 20px auto;
+  background-color: red;
+`;
+
+const TypeBox = styled.div`
+  width: 80%;
+  max-width: 400px;
+  margin: auto;
+  height: 150px;
+  border: 0.8px solid #979797;
+  box-shadow: 0px 1px 8px rgba(156, 156, 156, 0.15);
+  border-radius: 10px;
+  h2 {
+    display: block;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 20px auto;
+  }
+  img {
+    margin-right: 30px;
+  }
+  span {
+    font-size: 40px;
+    color: #414141;
+  }
+`;
 const Wrapper = styled.div`
   width: 90%;
   height: 90vh;
@@ -73,27 +103,4 @@ const LoginBtn = styled.button`
   border: none;
   margin-top: 20px;
   background-color: $pink;
-`;
-
-const IDinput = styled.input`
-  display: block;
-  margin: auto;
-  width: 80%;
-  border: 0.8px solid #979797;
-  box-shadow: 0px 1px 8px rgba(156, 156, 156, 0.15);
-  border-radius: 10px;
-  height: 34px;
-  margin-bottom: 28px;
-  margin-top: 40px;
-`;
-
-const PWinput = styled.input`
-  display: block;
-  margin: auto;
-  width: 80%;
-  border: 0.8px solid #979797;
-  box-shadow: 0px 1px 8px rgba(156, 156, 156, 0.15);
-  border-radius: 10px;
-  height: 34px;
-  margin-bottom: 28px;
 `;
