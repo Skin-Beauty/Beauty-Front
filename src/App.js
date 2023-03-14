@@ -5,6 +5,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import CosmeticPage from "./pages/CosmeticPage";
 import MyPage from "./pages/MyPage";
+import ResultPage from "./pages/ResultPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/register" element={<RegisterPage />}></Route>
         <Route exact path="/cosmetic" element={<CosmeticPage />}></Route>
         <Route exact path="/mypage" element={<MyPage />}></Route>
+        <Route exact path="/result" element={<ResultPage />}></Route>
       </Routes>
     </Router>
   );
