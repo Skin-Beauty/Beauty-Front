@@ -22,7 +22,9 @@ const LoginPage = () => {
         <span>아이디찾기</span>
         <span>비밀번호 찾기</span>
         <Link to="/register">회원가입</Link>
-        <LoginBtn>로그인</LoginBtn>
+        <LoginBtn>
+          <Link to="/cosmetic">로그인</Link>
+        </LoginBtn>
       </Wrapper>
     </>
   );
@@ -85,6 +87,7 @@ const IDinput = styled.input`
   height: 34px;
   margin-bottom: 28px;
   margin-top: 40px;
+  text-indent: 10px;
 `;
 
 const PWinput = styled.input`
@@ -96,4 +99,5 @@ const PWinput = styled.input`
   border-radius: 10px;
   height: 34px;
   margin-bottom: 28px;
+  text-indent: 10px;
 `;
