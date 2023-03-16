@@ -8,12 +8,26 @@ const MainPage = () => {
   }, []);
   return (
     <>
-      <LoginBtn></LoginBtn>
+      <Button>
+        <Link to="/login">로그인</Link>
+      </Button>
+      <Button>
+        <Link to="/register">회원가입</Link>
+      </Button>
     </>
   );
 };
 export default MainPage;
 
-const LoginBtn = styled.button`
+const Button = styled.button`
   width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  border-radius: 10px;
+  display: block;
+  height: 40px;
+  font-size: 15px;
+  a {
+    text-decoration: none;
+  }
 `;
