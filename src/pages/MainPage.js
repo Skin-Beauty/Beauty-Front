@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
+import SideBar from "../components/sideBar";
 
 const MainPage = () => {
   useEffect(() => {
@@ -8,6 +9,7 @@ const MainPage = () => {
   }, []);
   return (
     <>
+      <SideBar />
       <Button>
         <Link to="/login">로그인</Link>
       </Button>
@@ -20,6 +22,7 @@ const MainPage = () => {
 export default MainPage;
 
 const Button = styled.button`
+  display: block;
   width: 80%;
   max-width: 300px;
   margin: 20px auto;
