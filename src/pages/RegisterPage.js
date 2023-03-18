@@ -21,7 +21,9 @@ const RegisterPage = () => {
         <IDinput type="text" placeholder="아이디"></IDinput>
         <PWinput type="password" placeholder="비밀번호"></PWinput>
         <PWCheckinput type="password" placeholder="비밀번호확인"></PWCheckinput>
-        <LoginBtn>계정 만들기</LoginBtn>
+        <LoginBtn>
+          <Link to="/login">계정 만들기</Link>
+        </LoginBtn>
       </Wrapper>
     </>
   );
