@@ -2,14 +2,17 @@ import React, { useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 import "../styles/common.scss";
+
 import titleBox from "../components/titleBox";
 import popularCosmetic from "../_mock/popular";
 import BackBtn from "../components/backBtn";
+import SideBar from "../components/sideBar";
 
 const CosmeticPage = () => {
   return (
     <>
       <BackBtn></BackBtn>
+      <SideBar />
       {titleBox("인기제품")}
       {popularCosmetic.map((cos) => {
         return (

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "../styles/common.scss";
 import BackBtn from "../components/backBtn";
 import Profile from "../asset/Profile.svg";
+import SideBar from "../components/sideBar";
 
 const MyPage = () => {
   useEffect(() => {
@@ -12,6 +13,7 @@ const MyPage = () => {
   return (
     <>
       <BackBtn></BackBtn>
+      <SideBar></SideBar>
       <Wrapper>
         <SubTitle>Mypage</SubTitle>
         <Title>마이페이지</Title>
