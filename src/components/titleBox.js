@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
-import popularCosmetic from "../_mock/popular";
 
 const titleBox = (title) => {
   return (
