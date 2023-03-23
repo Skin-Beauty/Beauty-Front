@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
+
 import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import CosmeticPage from "./pages/CosmeticPage";
 import MyPage from "./pages/MyPage";
 import ResultPage from "./pages/ResultPage";
-
+import ReportPage from "./pages/ReportPage";
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/cosmetic" element={<CosmeticPage />}></Route>
         <Route exact path="/mypage" element={<MyPage />}></Route>
         <Route exact path="/result" element={<ResultPage />}></Route>
+        <Route exact path="/report" element={<ReportPage />}></Route>
       </Routes>
     </Router>
   );
