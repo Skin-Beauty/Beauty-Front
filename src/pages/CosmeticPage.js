@@ -44,6 +44,8 @@ const CosmeticPage = () => {
 
 const SelectBox = styled.div`
   width: fit-content;
+  user-select: none;
+  cursor: pointer;
 `;
 const SelectNameBox = styled.div`
   width: fit-content;

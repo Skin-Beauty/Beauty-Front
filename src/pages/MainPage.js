@@ -9,7 +9,6 @@ const MainPage = () => {
   }, []);
   return (
     <>
-      <SideBar />
       <Button>
         <Link to="/login">로그인</Link>
       </Button>
