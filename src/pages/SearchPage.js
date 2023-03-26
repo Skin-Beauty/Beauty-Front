@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 import "../styles/common.scss";
@@ -7,21 +7,33 @@ import BackBtn from "../components/backBtn";
 import profile from "../asset/Profile.svg";
 
 const SearchPage = () => {
-  useEffect(() => {}, []);
+  const [imgFile, setImgFile] = useState("");
+  const imgRef = useRef();
+  // 이미지 업로드 input의 onChange
+  const saveImgFile = () => {
+    const file = imgRef.current.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      setImgFile(reader.result);
+    };
+  };
   return (
     <>
       <BackBtn></BackBtn>
       <Title>피부진단</Title>
       <ResultImg>
+        <img src={imgFile ? imgFile : `${profile}`} alt="프로필 이미지" />
         <form>
           <label className="signup-profileImg-label" htmlFor="profileImg">
             프로필 이미지 추가
           </label>
           <input
-            className="signup-profileImg-input"
             type="file"
             accept="image/*"
             id="profileImg"
+            onChange={saveImgFile}
+            ref={imgRef}
           />
         </form>
       </ResultImg>
@@ -67,16 +79,20 @@ const TitleWrapper = styled.div`
 const ResultImg = styled.div`
   width: 300px;
   height: 200px;
-  background-color: red;
   border-radius: 20px;
   margin: auto;
-  // label태그
+  border: 2px solid black;
+  img {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+  }
   .signup-profileImg-label {
-    margin: 5px 0 20px 0;
+    margin: 5px auto 20px 0;
     font-weight: bold;
     font-size: 13px;
     color: #0095f6;
-    display: inline-block;
+    display: block;
     cursor: pointer;
   }
 
