@@ -8,6 +8,8 @@ import CosmeticPage from "./pages/CosmeticPage";
 import MyPage from "./pages/MyPage";
 import ResultPage from "./pages/ResultPage";
 import ReportPage from "./pages/ReportPage";
+import SearchPage from "./pages/SearchPage";
+
 function App() {
   return (
     <Router>
@@ -19,6 +21,7 @@ function App() {
         <Route exact path="/mypage" element={<MyPage />}></Route>
         <Route exact path="/result" element={<ResultPage />}></Route>
         <Route exact path="/report" element={<ReportPage />}></Route>
+        <Route exact path="/search" element={<SearchPage />}></Route>
       </Routes>
     </Router>
   );
